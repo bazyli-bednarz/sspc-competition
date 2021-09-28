@@ -9,6 +9,7 @@ body {
     background-color: $main-color;
 }
 
-body h1 {
-    font-family: $font-paragraphs;
+body h1,
+body h2 {
+    font-family: $font-headers;
 }

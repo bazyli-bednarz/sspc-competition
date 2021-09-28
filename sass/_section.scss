@@ -1,6 +1,7 @@
 .sections {
     background-color: $main-color;
     padding: 0 1rem;
+    box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
 
     .section {
         max-width: 1200px;
@@ -60,6 +61,130 @@
                 z-index: 3;
                 transform-origin: 50% 90%;
                 animation-delay: 1s;
+            }
+        }
+    }
+
+    .section-timeline {
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 2rem;
+        }
+
+        .timeline-wrapper {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 800px;
+            height: 100%;
+            position: relative;
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    padding: 20px;
+                    background-color: $main-color-darker;
+                    color: white;
+                    border-radius: 1rem;
+                    margin-bottom: 2rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .timeline-item {
+                        h2 {
+                            font-size: 1.5rem;
+
+                            line-height: 2rem;
+                        }
+
+                        p {
+                            line-height: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .section-timeline {
+
+
+
+        .timeline-wrapper {
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 3px;
+                background-color: $main-color-darker;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            ul {
+                &::after {
+                    display: block;
+                    content: '';
+                    clear: both;
+                }
+
+
+                li {
+                    width: 50%;
+                    margin-bottom: 4rem;
+                    position: relative;
+
+                    &.active::after {
+                        background-color: lightgreen;
+                        border-color: green;
+                        content: '✔️';
+                        text-align: center;
+                        vertical-align: 1.5rem;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        border: 3px solid $main-color-darker;
+                        border-radius: 50%;
+                        background-color: $main-color;
+                    }
+
+                    &:nth-child(odd) {
+                        float: left;
+                        clear: right;
+                        transform: translateX(-2rem);
+                        border-radius: 1rem 0 1rem 1rem;
+
+                        &::after {
+                            right: -2rem;
+                            top: 0;
+                            transform: translate(50%, -50%);
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        float: right;
+                        clear: left;
+                        transform: translateX(2rem);
+                        border-radius: 0 1rem 1rem 1rem;
+
+                        &::after {
+                            left: -2rem;
+                            top: 0;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes logo-grow {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -16,7 +17,6 @@
             transform: translate(-50%, -50%) scale(1);
   }
 }
-
 @keyframes logo-grow {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -44,16 +44,17 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   background-color: #E1CFB7;
 }
 
-body h1 {
-  font-family: "Arial", sans-serif;
+body h1,
+body h2 {
+  font-family: "Roboto Slab", "Times New Roman", serif, sans-serif;
 }
 
 .navigation-burger {
-  color: #333232;
+  color: #5a2a13;
   font-size: 2rem;
   position: fixed;
   top: 1.5rem;
@@ -79,7 +80,7 @@ body h1 {
 }
 
 .navigation-burger.active:hover {
-  color: #998871;
+  color: #5a2a13;
 }
 
 .navigation {
@@ -166,8 +167,9 @@ body h1 {
           transform: translateY(-5rem);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-box-shadow: 0 0 3px #998871;
-          box-shadow: 0 0 3px #998871;
+  z-index: 900;
+  -webkit-box-shadow: 0 0 3px #5a2a13;
+          box-shadow: 0 0 3px #5a2a13;
   text-align: center;
   border-radius: 0 0 1rem 1rem;
 }
@@ -193,6 +195,8 @@ body h1 {
 .sections {
   background-color: #E1CFB7;
   padding: 0 1rem;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
 }
 
 .sections .section {
@@ -279,5 +283,110 @@ body h1 {
           transform-origin: 50% 90%;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+}
+
+.sections .section-timeline .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+.sections .section-timeline .timeline-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 800px;
+  height: 100%;
+  position: relative;
+}
+
+.sections .section-timeline .timeline-wrapper ul {
+  list-style-type: none;
+}
+
+.sections .section-timeline .timeline-wrapper ul li {
+  padding: 20px;
+  background-color: #5a2a13;
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sections .section-timeline .timeline-wrapper ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sections .section-timeline .timeline-wrapper ul li .timeline-item h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.sections .section-timeline .timeline-wrapper ul li .timeline-item p {
+  line-height: 1.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-timeline .timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: #5a2a13;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .section-timeline .timeline-wrapper ul::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+  .section-timeline .timeline-wrapper ul li {
+    width: 50%;
+    margin-bottom: 4rem;
+    position: relative;
+  }
+  .section-timeline .timeline-wrapper ul li.active::after {
+    background-color: lightgreen;
+    border-color: green;
+    content: '✔️';
+    text-align: center;
+    vertical-align: 1.5rem;
+  }
+  .section-timeline .timeline-wrapper ul li::after {
+    content: '';
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 3px solid #5a2a13;
+    border-radius: 50%;
+    background-color: #E1CFB7;
+  }
+  .section-timeline .timeline-wrapper ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    border-radius: 1rem 0 1rem 1rem;
+  }
+  .section-timeline .timeline-wrapper ul li:nth-child(odd)::after {
+    right: -2rem;
+    top: 0;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
+  .section-timeline .timeline-wrapper ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+    border-radius: 0 1rem 1rem 1rem;
+  }
+  .section-timeline .timeline-wrapper ul li:nth-child(even)::after {
+    left: -2rem;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
