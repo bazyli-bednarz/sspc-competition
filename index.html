@@ -9,13 +9,60 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <title>Srebrna Szybka per cante - I Ogólnopolski Konkurs Wokalny
+    <title>Srebrna Szybka per canto - I Ogólnopolski Konkurs Wokalny
     </title>
 </head>
 
 <body>
-    <h1>Hello world!</h1>
-    <p>Test page</p>
+    <div class="wrapper">
+        <button class="navigation-burger"><i class="fas fa-bars"></i></button>
+        <nav class="navigation">
+            <div class="navigation-wrap">
+                <h1 class="navigation-h1">menu</h1>
+                <ul class="navigation-ul">
+                    <li><button class="navigation-button button-start">Start</button></li>
+                    <li><button class="navigation-button button-description">Opis konkursu</button></li>
+                    <li><button class="navigation-button button-timeline">Terminy</button></li>
+                    <li><button class="navigation-button button-documents">Dokumenty</button></li>
+                    <li><button class="navigation-button button-info">Pozostałe informacje</button></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="header">
+            <a href="index.html"><img src="images/logo-bez-doniczki.png"
+                    alt="Logo konkursu Srebrna Szybka per canto"></a>
+            <h1>Srebrna szybka per canto</h1>
+        </header>
+
+        <div class="sections">
+            <section class="section section-main">
+                <div class="animation-wrapper">
+                    <img src="images/leaf-1.svg" alt="Logo konkursu - liść"
+                        class="animation-logo animation-logo-leaf animation-logo-leaf-1">
+
+                    <img src="images/leaf-2.svg" alt="Logo konkursu - liść"
+                        class="animation-logo animation-logo-leaf animation-logo-leaf-2">
+
+                    <img src="images/leaf-3.svg" alt="Logo konkursu - liść"
+                        class="animation-logo animation-logo-leaf animation-logo-leaf-3">
+
+                    <img src="images/leaf-4.svg" alt="Logo konkursu - liść"
+                        class="animation-logo animation-logo-leaf animation-logo-leaf-4">
+
+                    <img src="images/clef.svg" alt="Logo konkursu - klucz wiolinowy"
+                        class="animation-logo animation-logo-clef">
+                </div>
+            </section>
+            <section class="section section-description"></section>
+            <section class="section section-timeline"></section>
+            <section class="section section-documents"></section>
+            <section class="section section-info"></section>
+        </div>
+        <footer class="footer">&copy 2021</footer>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,73 @@
+.navigation-burger {
+    color: rgb(51, 50, 50);
+    font-size: 2rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 999;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+
+    text-emphasis: none;
+
+
+    &:hover {
+        color: black;
+        transform: scale(1.1);
+    }
+
+    &.active {
+        color: $main-color;
+
+        &:hover {
+            color: $main-color-darker;
+        }
+    }
+}
+
+.navigation {
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $navigation-bgc;
+    color: $navigation-color;
+    transform: translateX(100%);
+    transition: 0.3s;
+
+
+    .navigation-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        @include flex-container(center, center, column);
+        text-align: center;
+
+        .navigation-h1 {
+            text-transform: uppercase;
+            margin: 1rem;
+            font-size: 2rem;
+        }
+
+        .navigation-ul {
+            list-style-type: none;
+
+            .navigation-button {
+                border: none;
+                background-color: transparent;
+                color: $navigation-color;
+                font-size: 1.6rem;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

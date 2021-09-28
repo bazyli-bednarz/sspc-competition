@@ -1,1 +1,283 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@-webkit-keyframes logo-grow {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes logo-grow {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #E1CFB7;
+}
+
+body h1 {
+  font-family: "Arial", sans-serif;
+}
+
+.navigation-burger {
+  color: #333232;
+  font-size: 2rem;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+}
+
+.navigation-burger:hover {
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navigation-burger.active {
+  color: #E1CFB7;
+}
+
+.navigation-burger.active:hover {
+  color: #998871;
+}
+
+.navigation {
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation .navigation-wrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.navigation .navigation-wrap .navigation-h1 {
+  text-transform: uppercase;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.navigation .navigation-wrap .navigation-ul {
+  list-style-type: none;
+}
+
+.navigation .navigation-wrap .navigation-ul .navigation-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation .navigation-wrap .navigation-ul .navigation-button:hover {
+  color: #E1CFB7;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 5rem;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  padding: 0 3rem 0 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 0 3px #998871;
+          box-shadow: 0 0 3px #998871;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.header.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.header h1 {
+  font-size: 1.2rem;
+}
+
+.header a {
+  height: 100%;
+}
+
+.header a img {
+  height: 100%;
+  padding: 1rem;
+}
+
+.sections {
+  background-color: #E1CFB7;
+  padding: 0 1rem;
+}
+
+.sections .section {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.sections .section-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sections .section-main .animation-wrapper {
+  width: 40vmax;
+  height: 40vmax;
+  min-height: 200px;
+  min-width: 200px;
+  margin: auto;
+  position: relative;
+}
+
+.sections .section-main .animation-wrapper .animation-logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  width: 30vmax;
+  min-height: 50px;
+  min-width: 50px;
+  -webkit-animation: 0.4s logo-grow linear both;
+          animation: 0.4s logo-grow linear both;
+}
+
+.sections .section-main .animation-wrapper .animation-logo-leaf-1 {
+  z-index: 4;
+  -webkit-transform-origin: 55% 85%;
+          transform-origin: 55% 85%;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.sections .section-main .animation-wrapper .animation-logo-leaf-2 {
+  z-index: 1;
+  -webkit-transform-origin: 60% 85%;
+          transform-origin: 60% 85%;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.sections .section-main .animation-wrapper .animation-logo.animation-logo-leaf-3 {
+  z-index: 2;
+  -webkit-transform-origin: 45% 85%;
+          transform-origin: 45% 85%;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.sections .section-main .animation-wrapper .animation-logo-leaf-4 {
+  z-index: 4;
+  -webkit-transform-origin: 50% 85%;
+          transform-origin: 50% 85%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.sections .section-main .animation-wrapper .animation-logo-clef {
+  z-index: 3;
+  -webkit-transform-origin: 50% 90%;
+          transform-origin: 50% 90%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+/*# sourceMappingURL=style.css.map */
