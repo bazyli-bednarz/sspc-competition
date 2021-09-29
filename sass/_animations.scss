@@ -15,3 +15,55 @@
         transform: translate(-50%, -50%) scale(1);
     }
 }
+
+@keyframes hole {
+    0% {
+        opacity: 0;
+        transform: scale(0) translate(-50%, 130%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1) translate(-50%, 130%);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1.1) translate(-50%, 130%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) translate(-50%, 130%);
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        top: 0;
+        left: 50%;
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.7) rotate(450deg);
+        opacity: 0;
+        top: 78%;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}

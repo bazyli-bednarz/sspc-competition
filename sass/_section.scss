@@ -35,36 +35,74 @@
                 animation: 0.4s logo-grow linear both;
             }
 
+            .animation-logo-note {
+                width: 5vmax;
+                animation: 1.3s falling ease-in both 0.8s;
+                z-index: 2;
+            }
+
+            .animation-logo-hole {
+                width: 15vmax;
+                height: 5vmax;
+                background: rgb(0, 0, 0);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(22, 7, 5, 1) 64%, rgba(54, 18, 13, 1) 100%);
+                border-radius: 50%;
+                animation: 2s hole ease both 1.2s;
+                transform-origin: 0 180%;
+            }
+
             .animation-logo-leaf-1 {
                 z-index: 4;
                 transform-origin: 55% 85%;
-                animation-delay: 0;
+                animation-delay: 4s;
             }
 
             .animation-logo-leaf-2 {
                 z-index: 1;
                 transform-origin: 60% 85%;
-                animation-delay: 0.4s;
+                animation-delay: 4.4s;
             }
 
             .animation-logo.animation-logo-leaf-3 {
                 z-index: 2;
                 transform-origin: 45% 85%;
-                animation-delay: 0.6s;
+                animation-delay: 4.6s;
             }
 
             .animation-logo-leaf-4 {
                 z-index: 4;
                 transform-origin: 50% 85%;
-                animation-delay: 0.2s;
+                animation-delay: 4.2s;
             }
 
             .animation-logo-clef {
                 z-index: 3;
                 transform-origin: 50% 80%;
-                animation-delay: 1.2s;
+                animation-delay: 5.2s;
                 animation-duration: 0.5s;
             }
+
+
+        }
+
+        .animation-text {
+            text-align: center;
+            position: absolute;
+            animation: show 4s ease 6.7s both;
+            transform-origin: 0 50%;
+
+        }
+
+        .animation-text-1 {
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .animation-text-2 {
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 

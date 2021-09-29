@@ -36,6 +36,108 @@
   }
 }
 
+@-webkit-keyframes hole {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(-50%, 130%);
+            transform: scale(0) translate(-50%, 130%);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(1) translate(-50%, 130%);
+            transform: scale(1) translate(-50%, 130%);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(1.1) translate(-50%, 130%);
+            transform: scale(1.1) translate(-50%, 130%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(-50%, 130%);
+            transform: scale(0) translate(-50%, 130%);
+  }
+}
+
+@keyframes hole {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(-50%, 130%);
+            transform: scale(0) translate(-50%, 130%);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(1) translate(-50%, 130%);
+            transform: scale(1) translate(-50%, 130%);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(1.1) translate(-50%, 130%);
+            transform: scale(1.1) translate(-50%, 130%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(-50%, 130%);
+            transform: scale(0) translate(-50%, 130%);
+  }
+}
+
+@-webkit-keyframes falling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    top: 0;
+    left: 50%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.7) rotate(450deg);
+            transform: translate(-50%, -50%) scale(0.7) rotate(450deg);
+    opacity: 0;
+    top: 78%;
+  }
+}
+
+@keyframes falling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    top: 0;
+    left: 50%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0.7) rotate(450deg);
+            transform: translate(-50%, -50%) scale(0.7) rotate(450deg);
+    opacity: 0;
+    top: 78%;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -179,7 +281,7 @@ body h3 {
           transform: translateY(0);
 }
 
-.header h1 {
+.header h2 {
   font-size: 1.2rem;
 }
 
@@ -246,46 +348,89 @@ body h3 {
           animation: 0.4s logo-grow linear both;
 }
 
+.sections .section-main .animation-wrapper .animation-logo-note {
+  width: 5vmax;
+  -webkit-animation: 1.3s falling ease-in both 0.8s;
+          animation: 1.3s falling ease-in both 0.8s;
+  z-index: 2;
+}
+
+.sections .section-main .animation-wrapper .animation-logo-hole {
+  width: 15vmax;
+  height: 5vmax;
+  background: black;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(64%, #160705), to(#36120d));
+  background: linear-gradient(0deg, black 0%, #160705 64%, #36120d 100%);
+  border-radius: 50%;
+  -webkit-animation: 2s hole ease both 1.2s;
+          animation: 2s hole ease both 1.2s;
+  -webkit-transform-origin: 0 180%;
+          transform-origin: 0 180%;
+}
+
 .sections .section-main .animation-wrapper .animation-logo-leaf-1 {
   z-index: 4;
   -webkit-transform-origin: 55% 85%;
           transform-origin: 55% 85%;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .sections .section-main .animation-wrapper .animation-logo-leaf-2 {
   z-index: 1;
   -webkit-transform-origin: 60% 85%;
           transform-origin: 60% 85%;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
 }
 
 .sections .section-main .animation-wrapper .animation-logo.animation-logo-leaf-3 {
   z-index: 2;
   -webkit-transform-origin: 45% 85%;
           transform-origin: 45% 85%;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s;
 }
 
 .sections .section-main .animation-wrapper .animation-logo-leaf-4 {
   z-index: 4;
   -webkit-transform-origin: 50% 85%;
           transform-origin: 50% 85%;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
 }
 
 .sections .section-main .animation-wrapper .animation-logo-clef {
   z-index: 3;
   -webkit-transform-origin: 50% 80%;
           transform-origin: 50% 80%;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 5.2s;
+          animation-delay: 5.2s;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+}
+
+.sections .section-main .animation-text {
+  text-align: center;
+  position: absolute;
+  -webkit-animation: show 4s ease 6.7s both;
+          animation: show 4s ease 6.7s both;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+.sections .section-main .animation-text-1 {
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sections .section-main .animation-text-2 {
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .sections .section-timeline .section-title {
