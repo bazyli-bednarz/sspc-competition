@@ -8,13 +8,18 @@ viewBox="0 0 10000 10000"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#2B2A29;stroke-width:150;stroke-miterlimit:22.9256}
-    .fil0 {fill:#009846}
+    .str0 {stroke:#5F2C2B;stroke-width:150;stroke-miterlimit:22.9256}
+    .fil0 {fill:url(#id0)}
    ]]>
   </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="7789.9" y1="5080.05" x2="4155.08" y2="6824.59">
+   <stop offset="0" style="stop-opacity:1; stop-color:#F7AA47"/>
+   <stop offset="0.54902" style="stop-opacity:1; stop-color:#FAD4A2"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#FEFEFE"/>
+  </linearGradient>
  </defs>
  <g id="Warstwa_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0 str0" d="M5167.85 8208.62c2051.39,-746.94 3130.68,-2024.46 2335.48,-4323.31 -476.31,499.85 -1036.63,951.4 -1583.48,1410.68 -1003.61,925.66 -1418.16,1852.51 -988.17,2781.04 55.5,96.76 134.02,154.08 236.17,131.59z"/>
+  <path class="fil0 str0" d="M5142.77 8137.55c1978.49,-922.88 2942.33,-2289.61 1949.81,-4510.4 -430.94,539.46 -949.77,1038.12 -1454.52,1543.31 -739.85,812.71 -1202.9,1595.84 -1054.69,2332.32 3.93,19.57 8.3,39.12 13.12,58.64 30.63,124.25 70.03,300.45 128.35,445.01 15.96,39.58 33.35,76.81 52.36,109.94 63.72,91.55 265.78,52.49 365.57,21.18z"/>
  </g>
 </svg>

@@ -7,9 +7,10 @@
 body {
     font-family: $font-paragraphs;
     background-color: $main-color;
-}
 
-body h1,
-body h2 {
-    font-family: $font-headers;
+    h1,
+    h2,
+    h3 {
+        font-family: $font-headers;
+    }
 }
