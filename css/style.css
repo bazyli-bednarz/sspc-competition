@@ -199,6 +199,11 @@ body h3 {
           transform: translateX(100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-image: url("/images/logo-opacity.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: screen;
 }
 
 .navigation .navigation-wrap {
@@ -221,10 +226,17 @@ body h3 {
   text-align: center;
 }
 
+.navigation .navigation-wrap img {
+  width: 5rem;
+  display: block;
+  margin: 1rem auto;
+}
+
 .navigation .navigation-wrap .navigation-h1 {
   text-transform: uppercase;
   margin: 1rem;
   font-size: 2rem;
+  color: #E1CFB7;
 }
 
 .navigation .navigation-wrap .navigation-ul {
@@ -235,7 +247,7 @@ body h3 {
   border: none;
   background-color: transparent;
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -270,7 +282,7 @@ body h3 {
           transform: translateY(-5rem);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 900;
+  z-index: 6;
   -webkit-box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -305,7 +317,6 @@ body h3 {
 .sections .section {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
   background-color: white;
 }
 
@@ -323,6 +334,7 @@ body h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  min-height: 100vh;
 }
 
 .sections .section-main .animation-wrapper {
@@ -332,6 +344,10 @@ body h3 {
   min-width: 200px;
   margin: auto;
   position: relative;
+}
+
+.sections .section-main .animation-wrapper img {
+  pointer-events: none;
 }
 
 .sections .section-main .animation-wrapper .animation-logo {
@@ -433,10 +449,33 @@ body h3 {
           transform: translateX(-50%);
 }
 
-.sections .section-timeline .section-title {
+.sections .section-title {
   text-align: center;
   margin-bottom: 3rem;
   padding: 0 2rem;
+}
+
+.sections .section-description p,
+.sections .section-documents p,
+.sections .section-info p {
+  margin: 3rem 2rem;
+}
+
+.sections .section-description p:last-of-type,
+.sections .section-documents p:last-of-type,
+.sections .section-info p:last-of-type {
+  margin-bottom: 0;
+}
+
+.sections .section-description img,
+.sections .section-documents img,
+.sections .section-info img {
+  margin: auto;
+  display: block;
+}
+
+.sections .section-timeline .section-title {
+  padding-top: 3rem;
 }
 
 .sections .section-timeline .timeline-wrapper {
@@ -472,8 +511,77 @@ body h3 {
   line-height: 1.6rem;
 }
 
+.sections .section-documents .section-title {
+  padding-top: 3rem;
+}
+
+.sections .section-documents .documents {
+  padding: 3rem;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.sections .section-documents .documents a {
+  display: block;
+  width: 100px;
+  padding: 1rem;
+}
+
+.sections .section-documents .documents a .document-img {
+  width: 50px;
+}
+
+.sections .section-info {
+  padding-bottom: 3rem;
+}
+
+.sections .section-info p::first-line {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.sections .section-info .info-address,
+.sections .section-info .info-jury {
+  text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
-  .section-timeline .timeline-wrapper::before {
+  .sections .section-description p,
+  .sections .section-documents p,
+  .sections .section-info p {
+    margin: 3rem 6rem;
+  }
+  .sections .section-description p:last-of-type,
+  .sections .section-documents p:last-of-type,
+  .sections .section-info p:last-of-type {
+    margin-bottom: 0;
+  }
+  .sections .section-description img,
+  .sections .section-documents img,
+  .sections .section-info img {
+    margin: auto;
+    display: block;
+  }
+  .sections .section-timeline .timeline-wrapper .section-title {
+    padding-top: 0;
+  }
+  .sections .section-timeline .timeline-wrapper::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -484,24 +592,24 @@ body h3 {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .section-timeline .timeline-wrapper ul::after {
+  .sections .section-timeline .timeline-wrapper ul::after {
     display: block;
     content: '';
     clear: both;
   }
-  .section-timeline .timeline-wrapper ul li {
+  .sections .section-timeline .timeline-wrapper ul li {
     width: 50%;
     margin-bottom: 4rem;
     position: relative;
   }
-  .section-timeline .timeline-wrapper ul li.active::after {
+  .sections .section-timeline .timeline-wrapper ul li.active::after {
     background-color: lightgreen;
     border-color: green;
     content: '✔️';
     text-align: center;
     vertical-align: 1.5rem;
   }
-  .section-timeline .timeline-wrapper ul li::after {
+  .sections .section-timeline .timeline-wrapper ul li::after {
     content: '';
     position: absolute;
     height: 1.5rem;
@@ -510,31 +618,36 @@ body h3 {
     border-radius: 50%;
     background-color: #E1CFB7;
   }
-  .section-timeline .timeline-wrapper ul li:nth-child(odd) {
+  .sections .section-timeline .timeline-wrapper ul li:nth-child(odd) {
     float: left;
     clear: right;
     -webkit-transform: translateX(-2rem);
             transform: translateX(-2rem);
     border-radius: 1rem 0 1rem 1rem;
   }
-  .section-timeline .timeline-wrapper ul li:nth-child(odd)::after {
+  .sections .section-timeline .timeline-wrapper ul li:nth-child(odd)::after {
     right: -2rem;
     top: 0;
     -webkit-transform: translate(50%, -50%);
             transform: translate(50%, -50%);
   }
-  .section-timeline .timeline-wrapper ul li:nth-child(even) {
+  .sections .section-timeline .timeline-wrapper ul li:nth-child(even) {
     float: right;
     clear: left;
     -webkit-transform: translateX(2rem);
             transform: translateX(2rem);
     border-radius: 0 1rem 1rem 1rem;
   }
-  .section-timeline .timeline-wrapper ul li:nth-child(even)::after {
+  .sections .section-timeline .timeline-wrapper ul li:nth-child(even)::after {
     left: -2rem;
     top: 0;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+}
+
+.footer p {
+  text-align: center;
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -38,7 +38,12 @@
     color: $navigation-color;
     transform: translateX(100%);
     transition: 0.3s;
+    background-image: url('/images/logo-opacity.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
+    background-blend-mode: screen;
 
     .navigation-wrap {
         width: 100%;
@@ -47,10 +52,19 @@
         @include flex-container(center, center, column);
         text-align: center;
 
+
+
+        img {
+            width: 5rem;
+            display: block;
+            margin: 1rem auto;
+        }
+
         .navigation-h1 {
             text-transform: uppercase;
             margin: 1rem;
             font-size: 2rem;
+            color: $main-color;
         }
 
         .navigation-ul {
@@ -60,7 +74,7 @@
                 border: none;
                 background-color: transparent;
                 color: $navigation-color;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 cursor: pointer;
                 transition: 0.3s;
 

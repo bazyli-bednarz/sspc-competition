@@ -1,16 +1,24 @@
 /**
+ * Hiding or showing menu depending on burger click state
+ */
+
+function navState() {
+    if ($('.navigation-burger').hasClass('active')) {
+        $('.navigation-burger').html('<i class="fas fa-times"></i>');
+        $('.navigation').css('transform', 'translateX(0)');
+    } else {
+        $('.navigation-burger').html('<i class="fas fa-bars"></i>')
+        $('.navigation').css('transform', 'translateX(100%)');
+    }
+}
+
+/**
  * Burger menu toggling
  */
 
 $('.navigation-burger').on('click', function () {
     $(this).toggleClass('active');
-    if ($(this).hasClass('active')) {
-        $(this).html('<i class="fas fa-times"></i>');
-        $('.navigation').css('transform', 'translateX(0)');
-    } else {
-        $(this).html('<i class="fas fa-bars"></i>')
-        $('.navigation').css('transform', 'translateX(100%)');
-    }
+    navState();
 });
 
 /**
@@ -38,3 +46,17 @@ for (let i = 0; i < datesArray.length; i++) {
         $('.timeline-list li' + ':nth-of-type(' + (i + 1) + ')').addClass('active');
     }
 }
+
+/**
+ * Handle menu links scroll
+ */
+const $buttons = $('.navigation-button');
+
+$buttons.on('click', function () {
+    $('.navigation-burger').toggleClass('active');
+    navState();
+    let postfix = '.section-' + $(this)[0].classList[1].substr(1 + $buttons[0].classList[1].indexOf('-'));
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(postfix).offset().top - 50
+    }, 1000);
+})
