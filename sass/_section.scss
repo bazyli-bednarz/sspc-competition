@@ -123,6 +123,7 @@
 
         p {
             margin: 3rem 2rem;
+            text-align: justify;
 
             &:last-of-type {
                 margin-bottom: 0;
@@ -132,6 +133,12 @@
         img {
             margin: auto;
             display: block;
+        }
+    }
+
+    .section-description {
+        p {
+            text-indent: 3rem;
         }
     }
 
@@ -181,6 +188,7 @@
     .section-documents {
         .section-title {
             padding-top: 3rem;
+            margin-bottom: 0;
         }
 
 
@@ -199,6 +207,10 @@
 
                 .document-img {
                     width: 50px;
+                }
+
+                span {
+                    font-size: 0.8rem;
                 }
 
             }
@@ -229,16 +241,20 @@
         .section-documents,
         .section-info {
             p {
-                margin: 3rem 6rem;
-
                 &:last-of-type {
                     margin-bottom: 0;
                 }
             }
 
             img {
-                margin: auto;
+                margin: 1rem auto;
                 display: block;
+            }
+        }
+
+        .section-description {
+            p {
+                margin: 1rem 6rem;
             }
         }
 
@@ -274,11 +290,14 @@
                         position: relative;
 
                         &.active::after {
-                            background-color: lightgreen;
-                            border-color: green;
-                            content: '✔️';
+                            background-color: rgb(141, 214, 207);
+                            content: '';
                             text-align: center;
                             vertical-align: 1.5rem;
+                        }
+
+                        &.last::after {
+                            animation: 1.5s blink infinite ease both;
                         }
 
                         &::after {

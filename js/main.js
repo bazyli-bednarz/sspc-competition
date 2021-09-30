@@ -37,13 +37,18 @@ $(window).on('scroll', function () {
  * Handle timeline dates
  */
 
-const datesArray = ['2021-11-15', '2021-12-1', '2021-12-10', '2021-12-16', '2021-12-20', '2022-01-05', '2022-01-11'];
+const datesArray = ['2021-10-01', '2021-12-01', '2021-12-10', '2021-12-15', '2021-12-16', '2021-12-20', '2021-12-21', '2022-01-05', '2022-01-11', '2022-01-11'];
 const today = new Date();
-for (let i = 0; i < datesArray.length; i++) {
-    if (today > new Date(datesArray[i])) {
-        console.log(new Date(datesArray[i]));
 
+for (let i = 0; i < datesArray.length; i++) {
+    let eventDate = new Date(datesArray[i]);
+    if (today >= eventDate) {
         $('.timeline-list li' + ':nth-of-type(' + (i + 1) + ')').addClass('active');
+        
+        if (today.toDateString() === eventDate.toDateString()) {
+            console.log('aaa');
+            $('.timeline-list li' + ':nth-of-type(' + (i + 1) + ')').addClass('last');
+        }
     }
 }
 

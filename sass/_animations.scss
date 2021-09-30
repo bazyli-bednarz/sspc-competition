@@ -67,3 +67,17 @@
     }
 
 }
+
+@keyframes blink {
+    0% {
+        background-color: rgb(88, 127, 255);
+    }
+
+    50% {
+        background-color: rgb(141, 214, 207);
+    }
+
+    100% {
+        background-color: rgb(88, 127, 255);
+    }
+}

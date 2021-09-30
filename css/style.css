@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes logo-grow {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -17,6 +16,7 @@
             transform: translate(-50%, -50%) scale(1);
   }
 }
+
 @keyframes logo-grow {
   0% {
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -138,6 +138,30 @@
   }
 }
 
+@-webkit-keyframes blink {
+  0% {
+    background-color: #587fff;
+  }
+  50% {
+    background-color: #8dd6cf;
+  }
+  100% {
+    background-color: #587fff;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #587fff;
+  }
+  50% {
+    background-color: #8dd6cf;
+  }
+  100% {
+    background-color: #587fff;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -153,7 +177,15 @@ body {
 body h1,
 body h2,
 body h3 {
-  font-family: "Roboto Slab", "Times New Roman", serif, sans-serif;
+  font-family: "Titillium Web", "Times New Roman", serif, sans-serif;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.emphasis {
+  font-weight: bold;
 }
 
 .navigation-burger {
@@ -459,6 +491,7 @@ body h3 {
 .sections .section-documents p,
 .sections .section-info p {
   margin: 3rem 2rem;
+  text-align: justify;
 }
 
 .sections .section-description p:last-of-type,
@@ -472,6 +505,10 @@ body h3 {
 .sections .section-info img {
   margin: auto;
   display: block;
+}
+
+.sections .section-description p {
+  text-indent: 3rem;
 }
 
 .sections .section-timeline .section-title {
@@ -513,6 +550,7 @@ body h3 {
 
 .sections .section-documents .section-title {
   padding-top: 3rem;
+  margin-bottom: 0;
 }
 
 .sections .section-documents .documents {
@@ -547,6 +585,10 @@ body h3 {
   width: 50px;
 }
 
+.sections .section-documents .documents a span {
+  font-size: 0.8rem;
+}
+
 .sections .section-info {
   padding-bottom: 3rem;
 }
@@ -562,11 +604,6 @@ body h3 {
 }
 
 @media only screen and (min-width: 768px) {
-  .sections .section-description p,
-  .sections .section-documents p,
-  .sections .section-info p {
-    margin: 3rem 6rem;
-  }
   .sections .section-description p:last-of-type,
   .sections .section-documents p:last-of-type,
   .sections .section-info p:last-of-type {
@@ -575,8 +612,11 @@ body h3 {
   .sections .section-description img,
   .sections .section-documents img,
   .sections .section-info img {
-    margin: auto;
+    margin: 1rem auto;
     display: block;
+  }
+  .sections .section-description p {
+    margin: 1rem 6rem;
   }
   .sections .section-timeline .timeline-wrapper .section-title {
     padding-top: 0;
@@ -603,11 +643,14 @@ body h3 {
     position: relative;
   }
   .sections .section-timeline .timeline-wrapper ul li.active::after {
-    background-color: lightgreen;
-    border-color: green;
-    content: '✔️';
+    background-color: #8dd6cf;
+    content: '';
     text-align: center;
     vertical-align: 1.5rem;
+  }
+  .sections .section-timeline .timeline-wrapper ul li.last::after {
+    -webkit-animation: 1.5s blink infinite ease both;
+            animation: 1.5s blink infinite ease both;
   }
   .sections .section-timeline .timeline-wrapper ul li::after {
     content: '';
