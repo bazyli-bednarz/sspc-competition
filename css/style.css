@@ -231,7 +231,7 @@ body h3 {
           transform: translateX(100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-image: url("/images/logo-opacity.png");
+  background-image: url(../images/logo-opacity.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -487,6 +487,11 @@ body h3 {
   padding: 0 2rem;
 }
 
+.sections .title-jury {
+  text-align: center;
+  padding: 0 2rem;
+}
+
 .sections .section-description p,
 .sections .section-documents p,
 .sections .section-info p {
@@ -542,6 +547,18 @@ body h3 {
 .sections .section-timeline .timeline-wrapper ul li .timeline-item h3 {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.sections .section-timeline .timeline-wrapper ul li .timeline-item h3.changed {
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+}
+
+.sections .section-timeline .timeline-wrapper ul li .timeline-item h3.changed::after {
+  content: '!';
+  display: inline;
+  color: red;
 }
 
 .sections .section-timeline .timeline-wrapper ul li .timeline-item p {

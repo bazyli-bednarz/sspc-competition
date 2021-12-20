@@ -117,6 +117,11 @@
         padding: 0 2rem;
     }
 
+    .title-jury {
+        text-align: center;
+        padding: 0 2rem;
+    }
+
     .section-description,
     .section-documents,
     .section-info {
@@ -172,8 +177,18 @@
                     .timeline-item {
                         h3 {
                             font-size: 1.5rem;
-
                             line-height: 2rem;
+
+                            &.changed {
+                                text-decoration: underline;
+                                text-decoration-color: red;
+
+                                &::after {
+                                    content: '!';
+                                    display: inline;
+                                    color: red;
+                                }
+                            }
                         }
 
                         p {
